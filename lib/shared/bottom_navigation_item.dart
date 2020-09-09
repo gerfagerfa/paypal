@@ -12,33 +12,38 @@ class BottomNavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+    return GestureDetector(
+      onTap: () {
+        onPress();
+      },
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
 
-        SizedBox(
-          height: 24,
-          width: 24,
-          child: Image.asset(
-            imageUrl,
-            color: selected ? kPrimaryColor : Colors.grey[400],
+          SizedBox(
+            height: 24,
+            width: 24,
+            child: Image.asset(
+              imageUrl,
+              color: selected ? kPrimaryColor : Colors.grey[400],
+            ),
           ),
-        ),
 
-        SizedBox(
-          height: 12,
-        ),
-
-        Text(
-          text,
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: selected ? kPrimaryColor : Colors.grey[400],
+          SizedBox(
+            height: 12,
           ),
-        )
 
-      ],
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: selected ? kPrimaryColor : Colors.grey[400],
+            ),
+          )
+
+        ],
+      ),
     );
   }
 }
