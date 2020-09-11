@@ -13,5 +13,18 @@ buildAppBar(String title) {
       ),
     ),
     automaticallyImplyLeading: false,
+    actions: [
+      Padding(
+        padding: EdgeInsets.only(right: 16),
+        child: SizedBox(
+          height: 24,
+          width: 24,
+          child: Image.asset(
+            "assets/icons/bell.png",
+            color: kPrimaryColor,
+          ),
+        ),
+      ),
+    ],
   );
 }
