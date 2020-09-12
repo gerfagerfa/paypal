@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paypal/screens/send/send_to.dart';
 
 class RecentItem extends StatelessWidget {
 
@@ -8,14 +9,22 @@ class RecentItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-          image: AssetImage(imageUrl), 
-          fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SendTo()),
+        );
+      },
+      child: Container(
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            image: AssetImage(imageUrl), 
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
