@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/shared/widgets.dart';
-import 'package:paypal/screens/dashboard/balance.dart';
-import 'package:paypal/screens/dashboard/transactions.dart';
+import 'package:paypal/screens/dashboard/balance_summary.dart';
+import 'package:paypal/screens/dashboard/transactions_summary.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -14,10 +14,10 @@ class Dashboard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            Balance(),
+            BalanceSummary(),
 
             Expanded(
-              child: Transactions(),
+              child: TransactionsSummary(),
             ),
 
           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
 
-class Balance extends StatelessWidget {
+class BalanceSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 

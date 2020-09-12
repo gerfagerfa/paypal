@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/shared/widgets.dart';
-import 'package:paypal/screens/send/search.dart';
+import 'package:paypal/shared/search.dart';
 import 'package:paypal/screens/send/recent.dart';
 import 'package:paypal/screens/send/contacts.dart';
 
