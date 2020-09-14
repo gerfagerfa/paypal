@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
-import 'package:paypal/screens/send/send_to.dart';
 
 class ContactItem extends StatelessWidget {
 
+  final Widget navigateTo;
   final String fullName;
   final String imageUrl;
   final String email;
 
-  ContactItem({@required this.fullName, @required this.imageUrl, this.email});
+  ContactItem({this.navigateTo, @required this.fullName, @required this.imageUrl, this.email});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SendTo()),
-        );
+        if(navigateTo != null){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => navigateTo),
+          );
+        }
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 8),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:paypal/shared/bottom_navigation_item.dart';
 import 'package:paypal/screens/dashboard/dashboard.dart';
 import 'package:paypal/screens/send/send.dart';
-import 'package:paypal/screens/request.dart';
+import 'package:paypal/screens/request/request.dart';
 import 'package:paypal/screens/settings.dart';
 
 class Master extends StatefulWidget {

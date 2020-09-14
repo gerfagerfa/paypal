@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:paypal/screens/send/send_to.dart';
 
 class RecentItem extends StatelessWidget {
 
+  final Widget navigateTo;
   final String imageUrl;
 
-  RecentItem({@required this.imageUrl});
+  RecentItem({this.navigateTo, @required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SendTo()),
-        );
+        if(navigateTo != null){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => navigateTo),
+          );
+        }
       },
       child: Container(
         width: 50,

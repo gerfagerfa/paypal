@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:paypal/screens/request/request_from.dart';
 import 'package:paypal/utils/constants.dart';
-import 'package:paypal/screens/send/recent_item.dart';
+import 'package:paypal/shared/recent_item.dart';
 
 class Recent extends StatelessWidget {
+
+  final Widget navigateTo;
+
+  Recent({@required this.navigateTo});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,11 +34,11 @@ class Recent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
 
-              RecentItem(imageUrl: "assets/images/user_0.jpg",),
-              RecentItem(imageUrl: "assets/images/user_1.jpg",),
-              RecentItem(imageUrl: "assets/images/user_2.jpg",),
-              RecentItem(imageUrl: "assets/images/user_3.jpg",),
-              RecentItem(imageUrl: "assets/images/user_4.jpg",),
+              RecentItem(navigateTo: navigateTo, imageUrl: "assets/images/user_0.jpg",),
+              RecentItem(navigateTo: navigateTo, imageUrl: "assets/images/user_1.jpg",),
+              RecentItem(navigateTo: navigateTo, imageUrl: "assets/images/user_2.jpg",),
+              RecentItem(navigateTo: navigateTo, imageUrl: "assets/images/user_3.jpg",),
+              RecentItem(navigateTo: navigateTo, imageUrl: "assets/images/user_4.jpg",),
 
             ],
           ),

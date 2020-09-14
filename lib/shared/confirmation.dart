@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
-import 'package:paypal/screens/send/contact_item.dart';
 import 'package:paypal/shared/rounded_button.dart';
 
 class Confirmation extends StatelessWidget {
+
+  final bool send;
+
+  Confirmation({@required this.send});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,7 @@ class Confirmation extends StatelessWidget {
                           ),
 
                           Text(
-                            "Founds transfered successfully!",
+                            "Founds " + (send ? "transfered" : "requested") + " successfully!",
                             style: TextStyle(
                               color: kPrimaryColor,
                               fontSize: 18,
@@ -47,7 +51,7 @@ class Confirmation extends StatelessWidget {
                           ),
 
                           Text(
-                            "Transfered to:",
+                            send ? "Transfered to:" : "Requested from",
                             style: TextStyle(
                               color: Colors.grey[400],
                               fontSize: 14,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
-import 'package:paypal/shared/contact_item.dart';
-import 'package:paypal/shared/rounded_button.dart';
 import 'package:paypal/shared/confirmation.dart';
+import 'package:paypal/shared/rounded_button.dart';
+import 'package:paypal/shared/contact_item.dart';
 
-class SendTo extends StatelessWidget {
+class RequestFrom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class SendTo extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          "Send money to",
+          "Request money from",
           style: TextStyle(
             color: kPrimaryColor,
           ),
@@ -63,7 +63,7 @@ class SendTo extends StatelessWidget {
                     ),
 
                     Text(
-                      "You send",
+                      "Request amount",
                       style: TextStyle(
                         color: kPrimaryColor,
                         fontSize: 18,
@@ -156,86 +156,6 @@ class SendTo extends StatelessWidget {
                     ),
 
                     Text(
-                      "They receive",
-                      style: TextStyle(
-                        color: Colors.grey[400],
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-
-                    SizedBox(
-                      height: 16,
-                    ),
-
-                    Text(
-                      "10.75",
-                      style: TextStyle(
-                        color: Colors.grey[400],
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-
-                    SizedBox(
-                      height: 16,
-                    ),
-
-                    Row(
-                      children: [
-
-                        Container(
-                          padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(10),
-                            ),
-                            color: Colors.grey[400],
-                          ),
-                          child: Row(
-                            children: [
-
-                              Text(
-                                "USD",
-                                style: TextStyle(
-                                  color: kPrimaryColor,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-
-                              SizedBox(
-                                width: 4,
-                              ),
-
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: kPrimaryColor,
-                                size: 18,
-                              ),
-                              
-                            ],
-                          ),
-                        ),
-
-                      ],
-                    ),
-
-                    SizedBox(
-                      height: 16,
-                    ),
-
-                    Divider(
-                      color: Colors.grey[400],
-                      height: 1,
-                      thickness: 0.3,
-                    ),
-
-                    SizedBox(
-                      height: 16,
-                    ),
-
-                    Text(
                       "Notes",
                       style: TextStyle(
                         color: kPrimaryColor,
@@ -277,11 +197,11 @@ class SendTo extends StatelessWidget {
                     ),
 
                     RoundedButton(
-                      text: "Send Money",
+                      text: "Request Now",
                       onPress: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Confirmation(send: true)),
+                          MaterialPageRoute(builder: (context) => Confirmation(send: false)),
                         );
                       },
                     ),
