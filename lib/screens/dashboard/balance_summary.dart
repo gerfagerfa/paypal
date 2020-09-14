@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
+import 'package:paypal/screens/dashboard/balance.dart';
 
 class BalanceSummary extends StatelessWidget {
   @override
@@ -23,6 +24,28 @@ class BalanceSummary extends StatelessWidget {
           ),
           child: Stack(
             children: [
+
+              Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: SizedBox(
+                      height: 45,
+                      width: 45,
+                      child: Image.asset(
+                        "assets/images/paypal_logo.png",
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
               Align(
                 alignment: Alignment.bottomLeft,
@@ -57,22 +80,22 @@ class BalanceSummary extends StatelessWidget {
                 ),
               ),
 
-              Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: SizedBox(
-                      height: 45,
-                      width: 45,
-                      child: Image.asset(
-                        "assets/images/paypal_logo.png",
-                        fit: BoxFit.fitHeight,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Balance()),
+                  );
+                },
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    child: Center(
+                      child: Icon(
+                        Icons.details,
+                        color: Colors.white,
                       ),
                     ),
                   ),

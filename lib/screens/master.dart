@@ -3,7 +3,7 @@ import 'package:paypal/shared/bottom_navigation_item.dart';
 import 'package:paypal/screens/dashboard/dashboard.dart';
 import 'package:paypal/screens/send/send.dart';
 import 'package:paypal/screens/request/request.dart';
-import 'package:paypal/screens/settings.dart';
+import 'package:paypal/screens/settings/settings.dart';
 
 class Master extends StatefulWidget {
   @override
@@ -44,63 +44,65 @@ class _MasterState extends State<Master> {
         duration: Duration(milliseconds: 250),
         child: currentWidgetView,
       ),
-      bottomNavigationBar: Container(
-        height: 80,
-        color: Colors.white,
-        child: Column(
-          children: [
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          height: 80,
+          color: Colors.white,
+          child: Column(
+            children: [
 
-            Container(
-              height: 2,
-              color: Colors.grey[300],
-            ),
-
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-
-                  BottomNavigationItem(
-                    imageUrl: "assets/icons/tile.png",
-                    text: "Dashboard",
-                    selected: bottomNavigationItemStatus[0],
-                    onPress: () {
-                      setCurrentWidgetView(0);
-                    },
-                  ),
-
-                  BottomNavigationItem(
-                    imageUrl: "assets/icons/send_money.png",
-                    text: "Send",
-                    selected: bottomNavigationItemStatus[1],
-                    onPress: () {
-                      setCurrentWidgetView(1);
-                    },
-                  ),
-
-                  BottomNavigationItem(
-                    imageUrl: "assets/icons/request_money.png",
-                    text: "Request",
-                    selected: bottomNavigationItemStatus[2],
-                    onPress: () {
-                      setCurrentWidgetView(2);
-                    },
-                  ),
-
-                  BottomNavigationItem(
-                    imageUrl: "assets/icons/settings.png",
-                    text: "Settings",
-                    selected: bottomNavigationItemStatus[3],
-                    onPress: () {
-                      setCurrentWidgetView(3);
-                    },
-                  ),
-
-                ],
+              Container(
+                height: 2,
+                color: Colors.grey[300],
               ),
-            ),
 
-          ],
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+
+                    BottomNavigationItem(
+                      imageUrl: "assets/icons/tile.png",
+                      text: "Dashboard",
+                      selected: bottomNavigationItemStatus[0],
+                      onPress: () {
+                        setCurrentWidgetView(0);
+                      },
+                    ),
+
+                    BottomNavigationItem(
+                      imageUrl: "assets/icons/send_money.png",
+                      text: "Send",
+                      selected: bottomNavigationItemStatus[1],
+                      onPress: () {
+                        setCurrentWidgetView(1);
+                      },
+                    ),
+
+                    BottomNavigationItem(
+                      imageUrl: "assets/icons/request_money.png",
+                      text: "Request",
+                      selected: bottomNavigationItemStatus[2],
+                      onPress: () {
+                        setCurrentWidgetView(2);
+                      },
+                    ),
+
+                    BottomNavigationItem(
+                      imageUrl: "assets/icons/settings.png",
+                      text: "Settings",
+                      selected: bottomNavigationItemStatus[3],
+                      onPress: () {
+                        setCurrentWidgetView(3);
+                      },
+                    ),
+
+                  ],
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );
