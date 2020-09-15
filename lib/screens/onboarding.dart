@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
 import 'package:paypal/utils/data.dart';
 import 'package:paypal/shared/rounded_button.dart';
-import 'package:paypal/screens/master.dart';
+import 'package:paypal/screens/login.dart';
 
 class Onboarding extends StatefulWidget {
   @override
@@ -72,7 +72,7 @@ class _OnboardingState extends State<Onboarding> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Master()),
+                        MaterialPageRoute(builder: (context) => Login()),
                       );
                     },
                     child: Text(
@@ -113,7 +113,7 @@ class _OnboardingState extends State<Onboarding> {
                 onPress: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Master()),
+                    MaterialPageRoute(builder: (context) => Login()),
                   );
                 }
               )
