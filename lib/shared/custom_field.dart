@@ -5,8 +5,9 @@ class CustomField extends StatelessWidget {
 
   final String hintText;
   final IconData iconData;
+  final String label;
 
-  CustomField({@required this.hintText, @required this.iconData});
+  CustomField({@required this.hintText, @required this.iconData, this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class CustomField extends StatelessWidget {
             color: kGreyColor,
             fontWeight: FontWeight.bold,
           ),
-          labelText: hintText,
+          labelText: label,
           enabledBorder: UnderlineInputBorder(      
             borderSide: BorderSide(
               color: kPrimaryColor,

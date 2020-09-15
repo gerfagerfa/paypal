@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paypal/utils/constants.dart';
-import 'package:paypal/shared/search.dart';
+import 'package:paypal/shared/custom_field.dart';
 import 'package:paypal/screens/dashboard/option_pill.dart';
 import 'package:paypal/screens/dashboard/transaction_item.dart';
 
@@ -43,7 +43,10 @@ class Transactions extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            Search(),
+            CustomField(
+              hintText: "Name, Email or Mobile number",
+              iconData: Icons.search,
+            ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
