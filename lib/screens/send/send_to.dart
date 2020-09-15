@@ -9,6 +9,7 @@ class SendTo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,

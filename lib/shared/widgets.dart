@@ -3,6 +3,7 @@ import 'package:paypal/utils/constants.dart';
 
 buildAppBar(String title) {
   return AppBar(
+    brightness: Brightness.light,
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: true,
